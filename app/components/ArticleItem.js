@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function ArticleItem({ article, sourceUrl }) {
   const [showDesc, setShowDesc] = React.useState(false);
   const [isSeen, setIsSeen] = React.useState(article.seen);
