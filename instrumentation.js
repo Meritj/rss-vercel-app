@@ -13,7 +13,7 @@ export function register() {
   });
 
   registerOTel({
-    serviceName: 'your-project-name',
+    serviceName: 'rss-vercel-app',
     traceExporter: exporter,
     instrumentationConfig: {
       fetch: {
