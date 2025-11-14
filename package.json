@@ -1,0 +1,10 @@
+{
+  "name": "rss-vercel-app",
+  "version": "1.0.0",
+  "dependencies": {
+    "next": "^14.0.0",
+    "react": "^18.2.0",
+    "@vercel/kv": "latest",
+    "rss-parser": "^3.12.0"
+  }
+}
