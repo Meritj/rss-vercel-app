@@ -36,5 +36,5 @@ export function register() {
     traceExporter: exporter,
   });
   
-  console.log('✅ [INSTRUMENTATION] OpenTelemetry configuré');
+  console.log('✅ [INSTRUMENTATION] OpenTelemetry configuréé');
 }
