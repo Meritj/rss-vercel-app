@@ -21,6 +21,7 @@ export function register() {
   const originalExport = exporter.export.bind(exporter);
   exporter.export = (spans, resultCallback) => {
     console.log('📤 [INSTRUMENTATION] Envoi de', spans.length, 'spans vers Datadog');
+    console.log('📋 [INSTRUMENTATION] Premier span:', JSON.stringify(spans[0], null, 2));
     originalExport(spans, (result) => {
       if (result.code === 0) {
         console.log('✅ [INSTRUMENTATION] Spans envoyés avec succès');
@@ -36,5 +37,5 @@ export function register() {
     traceExporter: exporter,
   });
   
-  console.log('✅ [INSTRUMENTATION] OpenTselemetry configuréé');
+  console.log('✅ [INSTRUMENTATION] OpenTelemetry configuré');
 }
