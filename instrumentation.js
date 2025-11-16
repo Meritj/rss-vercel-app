@@ -18,6 +18,7 @@ export function register() {
     url: exporterUrl,
     headers: {
       'dd-api-key': process.env.DD_API_KEY,
+      'dd-protocol': 'otlp',
       'Content-Type': 'application/x-protobuf'
     },
   });
