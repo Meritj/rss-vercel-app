@@ -6,7 +6,7 @@ export function register() {
     // OK pour Datadog US
     url: 'https://otlp.datadoghq.com/v1/traces', 
     headers: {
-      'DD-API-KEY': process.env.DD_API_KEY, 
+      'dd-api-key': process.env.DD_API_KEY, 
      
       'Content-Type': 'application/x-protobuf' 
     },
