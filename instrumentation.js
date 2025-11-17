@@ -26,7 +26,23 @@ export function register() {
         'Content-Type': 'application/json'
       },
     }),
-    instrumentations: [getNodeAutoInstrumentations()],
+    instrumentations: [
+      getNodeAutoInstrumentations({
+        // Désactiver les instrumentations qui posent problème
+        '@opentelemetry/instrumentation-fs': {
+          enabled: false,
+        },
+        '@opentelemetry/instrumentation-winston': {
+          enabled: false,
+        },
+        '@opentelemetry/instrumentation-bunyan': {
+          enabled: false,
+        },
+        '@opentelemetry/instrumentation-pino': {
+          enabled: false,
+        },
+      })
+    ],
   });
 
   sdk.start();
