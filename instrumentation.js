@@ -7,7 +7,7 @@ diag.setLogger(new DiagConsoleLogger(), DiagLogLevel.DEBUG);
 export function register() {
   
   const exporter = new OTLPTraceExporter({
-    url: 'https://http-intake.logs.datadoghq.com/api/v2/traces',
+    url: 'https://otlp.datadoghq.com/v1/traces',
     headers: {
       'DD-API-KEY': process.env.DD_API_KEY,
     },
