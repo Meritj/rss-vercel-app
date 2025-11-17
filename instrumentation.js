@@ -35,7 +35,7 @@ class LoggingOTLPExporter extends OTLPTraceExporter {
 export function register() {
   
   const exporter = new LoggingOTLPExporter({
-    url: 'https://http-intake.logs.datadoghq.com/api/v2/otel/v1/traces',
+    url: 'https://otlp.datadoghq.com/v1/traces',
     headers: {
       'DD-API-KEY': process.env.DD_API_KEY,
     },
