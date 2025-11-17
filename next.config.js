@@ -1,10 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    // ... autres configurations si vous en avez ...
-
-    webpack: (config, { isServer }) => {
+  experimental: {
+    instrumentationHook: true,
+  },webpack: (config, { isServer }) => {
         if (isServer) {
-
             config.externals.push(
                 'stream',
                 'fs',
@@ -26,7 +25,6 @@ const nextConfig = {
         }
 
         return config;
-    },
-};
+},}
 
-module.exports = nextConfig;
+module.exports = nextConfig
